@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>工业APP分级申请</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            height: 719px;
+            width: 100%;
+            background-color: ivory;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            overflow: hidden;
+            background-position: center center;
+        }
+        #head {
+            height: 120px;
+            width: 100%;
+            background-color: #66CCCC;
+            text-align: center;
+            position: relative;
+        }
+        .title {
+            font-family: "宋体";
+            color: #FFFFFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
+            font-size: 36px;
+            height: 40px;
+            width: 30%;
+        }
+        #wrap .new {
+            width: 100%;
+            text-align: left;
+        }
+        .new a button {
+            width: 11%;
+            height: 45px;
+            background-color: #ee7700;
+            border: none;
+            color: white;
+            font-size: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="header" id="head">
+    <div class="title">工业APP分级系统</div>
+</div>
+<div class="wrap" id="wrap">
+<form action="/up" method="post">
+    <table border="0px" width="600px" height="400px" align="center" cellpadding="0px" cellspacing="0px">
+        <tr height="40px" >
+            <td colspan="2">
+                <font color="red" size="4" ><b>工业APP分级申请</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><b>类别：</b></td>
+            <td><select name = "app_type1"/>
+                <option>--请选择--</option>
+                <option>适用范围</option>
+                <option>业务环节</option>
+                <option>知识类型</option>
+                </select></td>
+            <td><select name = "app_type2"/>
+                <option>--请选择--</option>
+                <option>基础共性工业APP</option>
+                <option>行业通用工业APP</option>
+                <option>企业专用工业APP</option>
+                <option>其他工业APP</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td align="center"><b>命名：</b></td>
+            <td><input type="text" name="app_name"/></td>
+        </tr>
+        <tr>
+            <td align="center"><b>安全等级：</b></td>
+            <td><input type="text" name="app_level"/></td>
+        </tr>
+        <tr>
+            <td align="center">
+                <font color="#6495ed" size="4" ><b>19项测评指标材料提交：</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><b>应用范围：</b></td>
+            <td><input type="text" name="app_use"/></td>
+        </tr>
+        <tr>
+            <td align="center" ><b>所解决工业问题的影响范围：</b></td>
+            <td> <input type="text" name="app_solve" size="30px"/></td>
+        </tr>
+        <tr>
+            <td align="center"><b>先进性程度：</b></td>
+            <td> <input type="text" name="app_new" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="提交" />
+                <a href="/cancle" target="_self"><button type = button> 取消</button></a>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</div>
+</body>
+</html>
